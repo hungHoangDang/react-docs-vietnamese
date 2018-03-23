@@ -78,35 +78,35 @@ function getGreeting(user) {
 
 ### Đặt Attributes với JSX
 
-You may use quotes to specify string literals as attributes:
+Bạn có thể dùng ngoặc kép để chỉ định chuỗi thành thuộc tính:
 
 ```js
 const element = <div tabIndex="0"></div>;
 ```
 
-You may also use curly braces to embed a JavaScript expression in an attribute:
+Bạn cũng có thể sử dụng ngoặc nhọn để nhúng một biểu thức JavaScript trong một thuộc tính:
 
 ```js
 const element = <img src={user.avatarUrl}></img>;
 ```
 
-Don't put quotes around curly braces when embedding a JavaScript expression in an attribute. You should either use quotes (for string values) or curly braces (for expressions), but not both in the same attribute.
+Không sử dụng ngoặc kép xung quang ngoặc nhọn khi nhúng một biểu thức JavaScript trong một thuộc tính. Bạn nên hoặc chỉ sử dụng ngoặc kép (cho giá trị chuỗi) hoặc ngoặc nhọn (cho biểu thức), nhưng không sử dụng cả hai trong cùng một thuộc tính.
 
 >**Warning:**
 >
->Since JSX is closer to JavaScript than to HTML, React DOM uses `camelCase` property naming convention instead of HTML attribute names.
+>Do JSX gần với JavaScript hơn HTML, React DOM sử dụng phương thức đặt tên cho đặc tính `camelCase` thay vì cách thức đặt tên cho thuộc tính HTML.
 >
->For example, `class` becomes [`className`](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) in JSX, and `tabindex` becomes [`tabIndex`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex).
+>Ví dụ, `class` trở thành [`className`](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) trong JSX, và `tabindex` trở thành [`tabIndex`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex).
 
 ### Specifying Children with JSX
 
-If a tag is empty, you may close it immediately with `/>`, like XML:
+Nếu một thẻ rỗng, bạn có thể đóng thẻ ngay lập tức bằng `/>`, như XML:
 
 ```js
 const element = <img src={user.avatarUrl} />;
 ```
 
-JSX tags may contain children:
+Thẻ JSX có thể có thẻ con:
 
 ```js
 const element = (
